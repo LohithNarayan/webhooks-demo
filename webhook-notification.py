@@ -70,8 +70,8 @@ platform = rcsdk.platform()
 def login():
     try:
       platform.login( jwt=os.environ.get('RC_JWT') )
-      subscribe_for_notification()
-      #read_subscriptions()
+      #subscribe_for_notification()
+      read_subscriptions()
     except Exception as e:
       sys.exit("Unable to authenticate to platform. Check credentials." + str(e))
 
